@@ -34,4 +34,18 @@ public class TiltedActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mManager.registerListener(mDetector,mAccelerometer,SensorManager.SENSOR_DELAY_UI);
+
+    }
+
+    @Override
+    protected void onPause (){
+        mManager.unregisterListener(mDetector);
+        super.onPause();
+    }
 }

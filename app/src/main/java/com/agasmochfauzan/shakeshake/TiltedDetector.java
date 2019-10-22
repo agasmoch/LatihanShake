@@ -20,6 +20,7 @@ public class TiltedDetector implements SensorEventListener {
 
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
+        if (Math.abs(sensorEvent.values[0])<=2f) return;
         if (sensorEvent.values[0] < 0)
             mListener.leftTilted();
         else
