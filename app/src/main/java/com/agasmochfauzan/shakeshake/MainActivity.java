@@ -15,6 +15,7 @@ import android.view.View;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity{
+    private View mView;
     private ShakeDetector mDetector;
     private Sensor mAccelerometer;
     private SensorManager mManager;
